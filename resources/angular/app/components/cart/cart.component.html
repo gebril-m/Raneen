@@ -1,0 +1,121 @@
+<!-- breadcrumb start -->
+<div class="breadcrumb-main ">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="breadcrumb-contain">
+                        <div>
+                            <h2>cart</h2>
+                            <ul>
+                                <li><a href="#">home</a></li>
+                                <li><i class="fa fa-angle-double-right"></i></li>
+                                <li><a href="#">cart</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb End -->
+    <br><br>  
+    <br><br>  
+    <br><br>  
+    <!-- section start -->
+    <!--section start-->
+    <section class="cart-section section-big-py-space bg-light">
+        <div class="custom-container">
+    
+            
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table cart-table table-responsive-xs">
+                            <thead>
+                            <tr class="table-head">
+                                <th scope="col">image</th>
+                                <th scope="col">product name</th>
+                                <th scope="col">price</th>
+                                <th scope="col">quantity</th>
+                                <th scope="col">action</th>
+                                <th scope="col">total</th>
+                            </tr>
+                            </thead>
+                            
+                                <tbody>
+
+                                <tr *ngFor="let cart of cartLists; let i = index">
+                                    <td>
+                                        <!-- <a href="#"><img src="../assets/images/layout-3/product/1.jpg" alt="cart"  class=" "></a> -->
+                                        <a [href]="cart.url"><img [src]="cart.thumbnail" alt="cart"  class=" "></a>
+                                    </td>
+                                    <td><a [href]="cart.url">{{cart.name}}</a>
+                                        <div class="mobile-cart-content row">
+                                            <div class="col-xs-3">
+                                                <div class="qty-box">
+                                                    <div class="input-group">
+                                                        <input type="text" name="quantity" class="form-control input-number" [value]="cart.quantity">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <h2 class="td-color">{{ cart.quantity }}</h2></div>
+                                            <div class="col-xs-3">
+                                                <h2 class="td-color" (click)="removeFromCart(cart.id)"><a href="javascript:void(0)" class="icon"><i class="ti-close"></i></a></h2></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h2>{{cart.price}}</h2></td>
+                                    <!-- <td>
+                                        <div class="qty-box">
+                                            <div class="input-group">
+                                                <input type="number" name="quantity" class="form-control input-number" [value]="cart.quantity">
+                                            </div>
+                                        </div>
+                                    </td> -->
+                                    <td>
+                                        <div class="qty-box">
+                                            <div class="input-group">
+                                                <!-- [(ngModel)] = "cart.quantity" -->
+                                                    <select class="unit-quantity-input " [(ngModel)] = "cart.quantity" (ngModelChange)="onQuantitySelected($event,cart.attribute,cart.id)"> 
+                                                        <option
+                                                            *ngFor="let opt of options( 15 ); let i = index"
+                                                            [value]=" i + 1"
+                                                            >{{ i + 1 }}</option> 
+                                                        <!-- [selected]="(i + 1) == cart.quantity" -->
+                                                        <!-- (click)="sendreq(12, cart.id)" -->
+                                                        <!-- <option value="5" selected="selected">5</option> -->
+                                                    </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><a href="javascript:void(0)" class="icon" (click)="removeFromCart(cart.id)"><i class="ti-close"></i></a></td>
+                                    <td>
+                                        <h2 class="td-color">{{ ( cart.price * cart.quantity ) }}</h2></td>
+                                </tr>
+
+                                </tbody>
+                            
+                        </table>
+                        <table class="table cart-table table-responsive-md">
+                            <tfoot>
+                            <tr>
+                                <td>total price :</td>
+                                <td>
+                                    <h2>{{ totalPrice }}</h2></td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="row cart-buttons">
+                        <div class="col-12">
+                            <a href="javascript:void(0)" class="btn btn-normal" (click)="removeAllFromCart()">remove all from cart</a>
+                            <a [href]="'/'" class="btn btn-normal m-3" >continue shopping</a>
+                            <a [href]="'/' +'checkout'" class="btn btn-normal">check out</a>
+                        </div>
+                </div>
+            
+    
+        </div>
+    </section>
+    <!--section end-->

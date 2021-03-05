@@ -1,0 +1,50 @@
+<div class="product-grid-area">
+    <ul class="products-grid">
+
+        <li class="item col-lg-4 col-md-4 col-sm-6 col-xs-6 " *ngFor="let product of products">
+            <div class="product-item">
+                <div class="item-inner">
+                    <div class="product-thumbnail">
+                        <div class="icon-sale-label sale-left" *ngIf="product.on_sale">Sale</div>
+                        <div class="pr-img-area">
+                            <a [title]="product?.name" [href]="'/' + product.slug + '/p'">
+                                <figure> <img class="first-img" [src]="product?.thumbnail" [alt]="product?.name" [title]="product?.name"> <img class="hover-img" [src]="product?.thumbnail" [alt]="product?.name" [title]="product?.name"></figure>
+                            </a>
+                        </div>
+                        <div class="pr-info-area">
+                            <div class="pr-button">
+                                <div class="mt-button add_to_wishlist">
+                                    <a href="javascript:void(0)" class="Add-to-Wishlist" title="Add to Wishlist" (click)="addToWishList(product.id)"> <i class="fa fa-heart"></i> </a>
+                                </div>
+                                <div class="mt-button quick-view">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#quick-view" title="Quick View" (click)="openModel(product)"> <i class="fa fa-search"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <div class="info-inner">
+                            <div class="item-title"> <a [title]="product?.name" [href]="'/' + product.slug + '/p'">{{ product?.name }}</a> </div>
+                            <div class="item-content">
+                                <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                <br>
+                                <div class="item-price">
+                                    <div class="price-box">
+                                        <span class="regular-price">
+                                        <span class="price" style="text-decoration: line-through;margin-right:10px;" *ngIf="product.before_price">${{product.before_price}}</span>
+                                        <span class="price">${{product.price}}</span>
+                                        </span>
+                                    </div>
+
+                                </div>
+                                <div class="pro-action">
+                                    <button type="button" class="add-to-cart Add-to-Cart" (click)="addToCart(product.id)"><span> Add to Cart</span> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

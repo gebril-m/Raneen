@@ -1,0 +1,1 @@
+Your Raneen Account Verification Code Is: {{ $code }}

@@ -1,0 +1,453 @@
+/* ************************************************************************** 
+ * 24WebGroup : Prallax-Multipurpose eCommerce Template
+ *
+ * file           : themestyles.css
+ * Desc           : Prallax-Multipurpose eCommerce Template for business, ecommerce, ecommerce psd, fashion, online shopping, shopping
+ * Version        : 1.0
+ * Date           : 6.29.2016
+ * Author         : 24WebGroup
+ * Author URI     : http://24webgorup.com
+ * Email          : webgroup@gmail.com
+ *
+ * 24WebGroup . Copyright 2016. All Rights Reserved.
+ * ********************************************************************************** */
+/* *************************************************************************************
+ * ******  Prallax-Multipurpose eCommerce Template - Table of Content ****************
+
+****************************************************/
+/* header top menu*/
+.nav.navbar-nav.pull-right {
+    float: left !important;
+}
+.top-bar .top-links {
+    float: right;
+}
+.top-links .navbar-nav {
+  float: right;
+}
+.top-links ul li a span {
+  float: right;
+  margin-left: 8px;
+  margin-right: 0;
+  line-height: 20px;
+}
+.top-links .navbar-nav > li {
+  float: right;
+}
+/* langauge currency */
+
+.lang-currency  .navbar-nav.pull-right > li > .dropdown-menu {
+  left: 0;
+  right: auto;
+}
+/* header center  */
+.col-sm-6.col-md-4.col-lg-4.header-logo {
+  float: right;
+}
+.col-md-4.col-lg-4.hidden-sm.hidden-xs.header-message {
+  float: right;
+}
+.header-container .logo {
+  text-align: right;
+}
+.header-message-box .fa.fa-mail-forward {
+  float: right;
+  margin-left: 10px;
+}
+.message-content {
+  float: right;
+}
+
+/* top menu  */
+
+.nav-container .sf-menu > li {
+  display: inline-block;
+  float: right;
+  margin-right: -4px;
+  position: relative;
+}
+.nav-container .sf-menu > li > a > .fa.fa-angle-down {
+  float: left;
+  line-height: 20px;
+  padding-right: 5px;
+}
+
+/* Cart*/
+.topcart-mini-container {
+  left: 0;
+  position: absolute;
+    right: auto;
+}
+.cart-product-list {
+  left: 0;
+
+}
+.nav-container  .home-icon {
+  float: right;
+  padding-left: 5px;
+}
+/* sub menu */
+.sf-menu > li > ul, .sfish-menu > .menu-animation > li > ul {
+  left: auto;
+  right: 0;
+}
+#sf-menu > ul > li ul > li > a::before {
+  content: "";
+  font-family: FontAwesome;
+  padding-left: 0;
+}
+#sf-menu > ul > li ul > li > a::after {
+  content: "\f104";
+  font-family: FontAwesome;
+  padding-left: 10px;
+}
+#sf-menu > ul > li ul > li > a {
+  text-align: right;
+}
+.sfish-menu > .menu-animation > li:hover > ul {
+  left: auto;
+  right: 116px;
+  top: 0;
+}
+/* menu animation */
+@keyframes mmenuffect {
+from {opacity:0; margin-right:-25px;}
+to {opacity:1;margin-right:0px;}
+}
+@-moz-keyframes mmenuffect {
+from {opacity:0; margin-right:-25px;}
+to {opacity:1;margin-left:0px;}
+}
+@-o-keyframes mmenuffect {
+from {opacity:0; margin-right:-25px;}
+to {opacity:1;margin-right:0px;}
+}
+@-webkit-keyframes mmenuffect {
+from {opacity:0; margin-right:-25px;}
+to {opacity:1;margin-right:0px;}
+}
+.sf-menu > li.megamenu > ul {
+  right: -3px;
+}
+.sf-menu > li.megamenu > ul > li a.sub-heading {
+  display: block;
+  text-align: right;
+}
+/* products */
+.product-top-ber {
+  text-align: right;
+}
+.owl-prev {
+  left: 0;
+}
+ .owl-next {
+  left: 40px;
+}
+.brand-logo-box .owl-next {
+  right: 0;
+  left: auto;
+}
+.product-con-left {
+  float: right;
+  text-align: right;
+}
+.product-con-right {
+  float: left;
+  text-align: left;
+}
+/* product layout */
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  float: right;
+}
+/* tabs */
+ul.tab-menu {
+  left: 90px;
+  right: auto;
+}
+.hover-box .fa.fa-shopping-cart {
+  float: right;
+}
+/* left category */
+
+.vmmenu-title  .fa.fa-list {
+  float: right;
+}
+.vmmenu-title {
+  text-align: right;
+}
+.vmmenu-title .fa.fa-list {
+  float: right;
+  margin-left: 6px;
+    margin-top: 6px;
+}
+.sf-vartical-menu > li {
+  text-align: right;
+}
+.sf-vartical-menu > li > a > .fa {
+  float: right;
+  padding-left: 7px;
+   padding-right: 0px;
+}
+ul.sf-vartical-menu > li > ul, ul.sf-vartical-menu > li > ul > li > ul {
+  right: 100%;
+  left: auto;
+}
+.sf-vartical-menu > li.parrent > a::after, .sf-vartical-menu > li > ul > li.parrent > a::after, .sf-vartical-menu > li > ul > li > ul > li.parrent > a::after {
+  float: left;
+  transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -web-kit-transform: rotate(180deg);
+  -op-transform: rotate(180deg);
+}
+.more {
+  text-align: right;
+}
+/* twitter */
+.twitter-hadding {
+  text-align: right;
+}
+
+.free-shipping-box.twitter .twitter-left {
+  float: right;
+  margin-left: 15px;
+  margin-right: 0;
+}
+.free-shipping-box.twitter .twitter-right {
+  text-align: right;
+}
+/* mini products */
+.category-details .category-img {
+  float: right;
+  margin-left: 20px;
+  margin-right: 0;
+}
+.latest-blog-hadding {
+  text-align: right;
+}
+/* footer */
+.footer-area h3.hadding-title {
+  text-align: right;
+}
+.footer-content {
+  text-align: right;
+}
+.footer-social-inner h3.hadding-title {
+  text-align: center;
+}
+.footer-content .fa.fa-angle-double-right {
+  float: right;
+  margin-left: 3px;
+  margin-top: 10px;
+   transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -web-kit-transform: rotate(180deg);
+  -op-transform: rotate(180deg);
+}
+.footer-address i {
+  float: right;
+  margin-left: 6px;
+  margin-right: 0;
+}
+/* top  to button */
+.top-bottom .fa-play {
+  left: 40px;
+  right: auto;
+}
+.blog-content a.read-more span {
+  float: right;
+}
+.today-inner .product-con-left {
+  float: right;
+}
+.style-2 .topcart-mini-container {
+  text-align: left;
+}
+.category-details .product-price {
+  float: right;
+}
+.hadding {
+  text-align: right;
+}
+.popular-tag-content {
+  text-align: right;
+}
+.style-3 .free-sp-icon-box-inner {
+  float: right;
+}
+.style-tab-3 .owl-next{
+  right:0;
+  left: auto;
+}
+.custom-block-title {
+  text-align: right;
+}
+/* products details */
+.zoomContainer {
+  left: 127px !important;
+  /* right and left sidebar */
+  //left: -117px !important;
+  left: 176px !important;
+  display: none;
+}
+.product-essential:hover .zoomContainer {
+    display: block;
+}
+
+
+
+.product-shop {
+  text-align: right;
+}
+.add-to-cart {
+  position: relative;
+}
+.add-to-cart .input-content {
+  float: right;
+}
+.add-to-cart .qty-arrows {
+  position: absolute;
+  right: 0;
+  top: 0;
+   left: auto;
+}
+.add-to-cart button i {
+  float: right;
+  margin: 3px 5px 0;
+}
+.add-to-cart .input-content .box-qty {
+  display: inline;
+  float: left;
+  position: relative;
+}
+.add-to-cart .input-content > label {
+  display: inline;
+  float: right;
+  font-weight: 400;
+  margin-top: 10px;
+   margin-left: 5px;
+}
+ .more-views .owl-next {
+  right: -30px;
+  left: auto;
+}
+.single-product-tab .nav-tabs > li {
+  float: right;
+}
+.form-control {
+  text-align: right;
+}
+.block-title {
+  text-align: right;
+}
+.single-product-description > p {
+  text-align: right;
+}
+.form-group {
+  text-align: right;
+}
+/* acrodin */
+.accordion a {
+  text-align: right;
+}
+.accordion span.down-up {
+  left: 0;
+  right: auto;
+}
+.accordion ul > li > a::after {
+  background: #333;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  margin-left: 5px;
+  margin-right: 0;
+  transform: rotate(45deg);
+  width: 5px;
+}
+.accordion ul > li > a::before,.accordion li a:hover::before {
+  background:none;
+}
+.accordion ul a {
+  padding: 7px 15px 7px 0;
+}
+.accordion ul > li > ul > li > a {
+  padding: 7px 25px 7px 0;
+}
+.catalog-inner {
+  text-align: right;
+}
+.catalog-box label {
+  float: right;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.form-search .form-control {
+    text-align: left;
+}
+.sub-title {
+  text-align: right;
+}
+.account-list-box {
+  text-align: right;
+}
+.title-box {
+  text-align: right;
+}
+.account-details-wrap {
+  text-align: right;
+}
+li.account-item a span {
+  float: right;
+  margin-left: 6px;
+  margin-top: 10px;
+  transform: rotate(180deg);
+   -web-kit-transform: rotate(180deg);
+    -moz-kit-transform: rotate(180deg);
+}
+.list-product-content {
+  text-align: right;
+}
+.list-product-content .ratting-box {
+  float: right;
+}
+.product-discription {
+  clear: both;
+}
+.list-product-content .product-price {
+  clear: both;
+  float: right;
+}
+.list-product-content .ratting-box {
+  clear: both;
+  float: right;
+}
+/* check out */
+.accordion-toggle > span {
+  float: right;
+  margin-left: 15px;
+  margin-right: 0;
+}
+.panel-default > .panel-heading {
+  text-align: right;
+}
+.panel-body {
+  text-align: right;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+  float: none;
+}
+th {
+  text-align: right;
+}
+.our-team .sub-title {
+    text-align: center;
+}
+.account-form-inner .button-set {
+  text-align: right;
+}
+.comment-form .padding-top-product{
+    text-align: right;  
+}
+.new-user-content {
+  padding: 30px;
+  text-align: right;
+}

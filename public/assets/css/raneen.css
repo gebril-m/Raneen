@@ -1,0 +1,190 @@
+/*Popup Design*/
+.close{float:right;font-size:1.5rem;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.5;}
+.close:hover,.close:focus{color:#000;text-decoration:none;opacity:.75;}
+button.close{padding:0;background-color:transparent;border:0;-webkit-appearance:none;}
+@media (min-width: 576px){
+.mx-sm-3{margin-right:1rem!important;}
+.mx-sm-3{margin-left:1rem!important;}
+}
+@media print{
+*,*::before,*::after{text-shadow:none!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+p,h2{orphans:3;widows:3;}
+h2{page-break-after:avoid;}
+}
+/*! CSS Used from: http://164.68.111.29/QuantumSITRaneenBack/public/frontend/assets/css/color2-eng.css ; media=screen */
+@media screen{
+h2{font-weight:400;margin-bottom:0;font-size:calc(20px + (36 - 20) * ((100vw - 320px) / (1920 - 320)));}
+input{letter-spacing:0.05em;}
+::selection{background-color:#b22827;color:#B22827;}
+p{font-size:14px;line-height:1.4;margin-bottom:0;letter-spacing:0.05em;}
+button:focus{outline:none;}
+button{cursor:pointer;}
+.btn-normal{font-size:14px;padding:18px 45px;font-weight:700;color:#fff!important;border:1px solid #b22827!important;background-color:#b22827;position:relative;-webkit-transition:all 0.3s;transition:all 0.3s;display:inline-block;line-height:1;border-radius:0;letter-spacing:0.05em;}
+.btn-normal:hover{background-color:#b22827;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg{background-color:#fff;padding:25px;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .close{padding-right:10px;padding-top:5px;position:absolute;right:17px;top:0;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .close span{color:#000;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .offer-content h2{margin-bottom:15px;text-align:center;color:#333;text-transform:uppercase;line-height:1;font-weight:700;letter-spacing:0.05em;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .offer-content form .form-group{margin:0 auto;text-align:center;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .offer-content form .form-group .form-control{padding-top:15px;padding-bottom:15px;text-align:center;font-size:14px;max-width:640px;left:0;right:0;margin:0 auto;letter-spacing:0.05em;margin-bottom:15px;border-radius:0!important;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .offer-content form .form-group .btn-normal{text-transform:uppercase;}
+.theme-modal#exampleModal .close span{color:#B22827;font-size:35px;text-shadow:none;}
+.theme-modal#exampleModal .modal-bg{background-color:#ffffff96!important;padding:0;}
+.theme-modal#exampleModal .close{position:absolute;right:10px;}
+.theme-modal#exampleModal .offer-content{background-image:url(http://164.68.111.29/QuantumSITRaneenBack/public/frontend/assets/images/bg-newslatter.png);background-repeat:no-repeat;background-position:right center;background-color:rgba(255, 255, 255, 0.4);min-height:460px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-right:50%;}
+.theme-modal#exampleModal .offer-content>div{width:100%;padding:50px;}
+.theme-modal#exampleModal .offer-content p{text-align:center;color:#777;line-height:1.6;margin-bottom:20px;}
+@media (max-width: 991px){
+.btn-normal{padding:12px 40px;}
+.theme-modal#exampleModal .close span{color:#444;}
+.theme-modal#exampleModal .offer-content{background-color:#fff;background-image:url(http://164.68.111.29/QuantumSITRaneenBack/public/frontend/assets/images/modal-popup/Genaral.png);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:0;min-height:400px;padding-right:0;background-size:cover;}
+}
+@media (max-width: 577px){
+.btn-normal{padding:13px 15px;}
+}
+@media (max-width: 420px){
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg{padding:30px;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .offer-content h2{font-size:30px;}
+}
+@media (max-width: 360px){
+.theme-modal#exampleModal .offer-content{min-height:300px;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg{padding:20px;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .close{right:10px;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .offer-content form .form-group .form-control{padding-top:10px;padding-bottom:10px;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .offer-content h2{font-size:20px;margin-bottom:10px;}
+}
+}
+/*! CSS Used from: http://164.68.111.29/QuantumSITRaneenBack/public/frontend/assets/css/color2-ar.css ; media=sceen */
+@media sceen{
+h2,p{text-align:right;}
+.theme-modal .modal-dialog .modal-content .modal-body .modal-bg .close{left:17px;right:unset;}
+}
+/*! CSS Used from: http://164.68.111.29/QuantumSITRaneenBack/public/frontend/assets/css/mystyle.css ; media=screen */
+@media screen{
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{border-radius:10px;}
+::-webkit-scrollbar-thumb{background:#c1c1c1bf;border-radius:10px;}
+::-webkit-scrollbar-thumb:hover{background:#b22827;}
+}
+/*General*/
+.rtl .product-right .product-icon .wishlist-btn i{
+	border-right: unset;
+}
+.creative-card .nav-link{
+	font-size: 12px;
+}
+.product .product-box .product-imgbox .product-front, .product .product-box .product-imgbox img{
+	width: unset !important;
+}
+.product-slick img, .rtl-product-slick img, .product-right-slick img, .rtl-product-right-slick img{
+	min-height: unset !important;
+	height: unset !important;
+	width: unset !important;
+	display: block;
+    margin: auto;
+}
+
+/* .mcd-menu li:hover > ul, .mcd-menu li ul li:hover > ul{
+    right: 215px !important;
+} */
+.mobile-bar{
+	width: 100%;
+	height: 100%;
+}
+.mcd-menu li ul li a{
+	line-height:20px;
+    padding: 10px 20px !important;
+}
+.mobile-bar a{
+	color: inherit;
+}
+.mobile-icon-link{
+	float: left;
+	width: 33%;
+	height: 100%;
+	text-align: center;
+	font-size: 15px;
+	color: #fff;
+	padding:12px 0;
+}
+.media{
+    border-bottom: 1px solid #ccc !important;
+    padding-bottom: 15px;
+}
+.mobile-fix-option{
+	display: none;
+}
+.footer-contant ul li a{
+    font-family: 'cairo', sans-serif;
+}
+.mtpage{
+	margin-top: 250px;
+}
+.product .product-box .product-detail .detail-title .detail-right .check-price,.product .product-box .product-detail .detail-title .detail-right .price{
+	font-size: 15px !important;
+	font-weight: bold;
+}
+.rtl .add_to_cart .cart-inner .cart_media .close-circle{
+	left: unset !important;
+	right: 0;
+}
+.product .product-box .product-detail .detail-title .detail-left .rating-star{
+	font-size: 20px;
+    padding-bottom: 10px;
+}
+.product .product-box .product-detail .detail-title .detail-left .rating-star i{
+	font-size: unset !important;
+}
+.media-contant .rating{
+	margin-top: 30px;
+}
+.cart-bar-title{
+    height: 82px;
+    overflow: hidden;
+}
+@media (max-width: 577px){
+	.slider-right-nav{
+		display: none;
+	}
+	.mtpage{
+		margin-top: unset !important;
+	}
+	.mobile-cart{
+		display: none;
+	}
+	.mobile-fix-option{
+		display: block;
+	}
+	.product-right .product-buttons .btn-normal{
+		margin-bottom: 10px;
+		width: 100%; 
+	}
+	.collection-banner .banner-5.p-center .collection-banner-contain .sub-contain{
+		width: 100%;
+	}
+	.layout-header2 .main-menu-block .sm-nav-block{
+		margin-left: 10px;
+	}
+	.overlay-label{
+		position: unset !important;
+    	line-height: 20px;
+	}
+	/* .slider-img{
+		margin-bottom: 20px;
+	} */
+	.tab-product-main .tab-prodcut-contain ul li.current a{
+		border: unset;
+	}
+	.collection-banner .collection-banner-main .collection-banner-contain{
+		top: 0 !important;
+	}
+	.circle-cat{
+		height: auto !important;
+	}
+	.rtl .hot-deal .slick-next{
+    	top: 0px;
+	}
+	.rtl .hot-deal .slick-prev{
+    	top: 0px;
+	}
+}

@@ -1,0 +1,38 @@
+<HTML>BUTTON
+<button class="payBtn btn btn-primary" onclick="callLightbox()">PAY LightBox</button>
+CALL SCRIPT
+<script src="https://upgstaging.egyptianbanks.com:3006/js/Lightbox.js"></script>
+SCRIPT
+<script type="text/javascript">
+    function callLightbox() {
+        var orderId = '';
+        var paymentMethodFromLightBox = null;
+        var amount = 100;
+        var mID = 10358282056;
+        var tID = 54450380;
+        var secureHash = "37613064363934342D643864302D343633392D626639372D306564616266646462326463";
+        var trxDateTime = "20200807032800";
+        var returnUrl = Lightbox.Checkout.configure = {
+            OrderId: orderId,
+            paymentMethodFromLightBox: paymentMethodFromLightBox,
+            MID: mID,
+            TID: tID,
+            SecureHash: secureHash,
+            TrxDateTime: trxDateTime,
+            AmountTrxn: amount,
+            MerchantReference: "3335000",
+            ReturnUrl: returnUrl,
+            completeCallback: function (data) {
+                console.log('test');
+            }
+            , errorCallback: function () {
+                //your code here
+            }
+            , cancelCallback: function () {
+                //your code here
+            }
+        };
+        Lightbox.Checkout.showLightbox();
+    }
+</script>
+</HTML>

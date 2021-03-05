@@ -1,0 +1,113 @@
+.chat .container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.chat .darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.chat .container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.chat .container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.chat .container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.chat .time-right {
+  float: right;
+  color: #aaa;
+}
+
+.chat .time-left {
+  float: left;
+  color: #999;
+}
+.wizard-content .wizard.wizard-circle > .steps .step {
+
+    width: 180px !important;
+    height: 50px !important;
+    line-height: 45px;
+    border-radius:0% !important;
+    font-size: 18px !important;
+}
+
+.wizard-content .wizard > .steps .step {
+    left: 18% !important;
+}
+
+.wizard-content .wizard.vertical > .steps {
+    background: #f0f0f0;
+}
+
+#editor {
+    background: var(--ck-sample-color-white);
+    box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+    border: 1px solid #DFE4E6;
+    border-bottom-color: #cdd0d2;
+    border-right-color: #cdd0d2;
+    height: 200px;
+}
+
+label.error{
+    display: initial;
+}
+
+#btnPlus {
+    border: 0px;
+    background-image: url("/admin-asset/assets/images/add.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+#btnMinus {
+    border: 0px;
+    background-image: url("/admin-asset/assets/images/remove.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+.recordset{
+    margin-bottom: 12px;
+    padding: 5px;
+    background-color: #f3f3f3;
+}
+
+.error {
+    color: red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}

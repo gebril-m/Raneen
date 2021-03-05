@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+</head>
+<body>
+https://sbcheckout.payfort.com/FortAPI/paymentPage
+https://sbcheckout.payfort.com/FortAPI/paymentApi/
+<form method="post" action="http://localhost:8000/payfort/" id="form1" name="form1">
+    <input type="hidden" name="merchant_identifier" value="2b371e07">
+    <input type="hidden" name="access_code" value="hNuBzdiJ6hLi6Yls0VGj">
+    <input type="hidden" name="merchant_reference" value="SSvpsegNwD">
+    <input type="hidden" name="language" value="en">
+    <input type="hidden" name="service_command" value="TOKENIZATION">
+    <input type="hidden" name="return_url" value="http://localhost:8000/paymentToken/">
+    <input type="hidden" name="signature" value="6341837a8d6a194d2fb5b7fdec71853d8fe626eee229eacf64d2819f4b5427a1">
+    <input type="hidden" name="expiry_date" value="2101">
+    <input type="hidden" name="card_number" value="4005550000000001">
+    <input type="hidden" name="card_security_code" value="123">
+    <input type="hidden" name="card_holder_name" value="mohamed">
+    <input type="submit" id="submit">
+</form>
+</body>
+</html>

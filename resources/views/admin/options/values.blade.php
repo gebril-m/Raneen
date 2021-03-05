@@ -1,0 +1,1 @@
+{{ Form::select('options_values[]', $values, null, ['class'=>'form-control']) }}

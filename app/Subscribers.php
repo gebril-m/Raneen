@@ -1,0 +1,11 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Subscribers extends Model
+{
+	protected $fillable=['email'];
+    public $table='subscribers';
+}

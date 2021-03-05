@@ -1,0 +1,193 @@
+<div class="container">
+    <br>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <!-- brand filter start -->
+            <ul class="list-group" *ngIf="brands.length">
+                <li class="list-group-item active"
+                    style="background: #b22827;border: 1px solid #b22827;color: white;font-size: 16px;">BRANDS
+                </li>
+                <li class="list-group-item" *ngFor="let brand of brands" hide="!item.brands">
+                    <input type="checkbox" class="custom-control-input" [id]="brand"
+                           [checked]="productsFilter.brand.includes(brand)"
+                           (change)="productsFilterMethod(brand, 'brand')">&nbsp;
+                    <label class="custom-control-label" [attr.for]="brand"
+                           style="color: #272727;font-weight: normal;">{{brand}}</label>
+                </li>
+            </ul>
+
+            <ul class="list-group" *ngIf="colors.length">
+                <li class="list-group-item active"
+                    style="background: #b22827;border: 1px solid #b22827;color: white;font-size: 16px;">COLORS
+                </li>
+                <div
+                    style="background-color: white;border: 1px solid #ddd;padding: 10px 15px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;">
+                    <div style="border-radius: 5px;width: 20px;height: 15px;display: inline-block;margin-left:5px;"
+                         class="list-group-item" [class]="'color'" [class.active]="productsFilter.color.includes(color)"
+                         [style.backgroundColor]="color" (click)="productsFilterMethod(color, 'color')"
+                         *ngFor="let color of colors; let i = index; let first = first"></div>
+                </div>
+            </ul>
+
+
+            <ul class="list-group" *ngIf="prices.length">
+                <li class="list-group-item active"
+                    style="background: #b22827;border: 1px solid #b22827;color: white;font-size: 16px;">PRICES
+                </li>
+
+                <div
+                    style="background-color: white;border: 1px solid #ddd;padding: 10px 15px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;">
+                    <!--                    <table>-->
+                    <!--                        <tr>-->
+                    <!--                            <td>{{ MinPrice }}</td>-->
+                    <!--                            <td><input type="range" name="" onchange="getVal()" class="list-group-item slider myRange" (change)="productsFilterMethod($event,'price')" hide="!item.prices" [min]="MinPrice" [max]="MaxPrice"></td>-->
+                    <!--                            <td>{{ MaxPrice }}</td>-->
+                    <!--                        </tr>-->
+                    <!--                    </table>-->
+
+                    <div class="form-control mb-5">
+                        <label class="custom-control-label" for="minPrice">Min Price</label>
+                        <input id="minPrice" type="text" class="form-control-range" name="minPrices"  (keyup)="productsFilterMethod($event,'price')"
+                               [(ngModel)]="MinPrice" #minPrice="ngModel">
+                    </div>
+                    <div class="form-control mb--10">
+                        <label class="custom-control-label" for="maxPrice">Mac Price</label>
+                        <input id="maxPrice" type="text" class="form-control-range" name="MaxPrice" (keyup)="productsFilterMethod($event,'price')"
+                               [(ngModel)]="MaxPrice" #maxPrice="ngModel">
+                    </div>
+                    <div class="custom-slider">
+                        <ng5-slider [(value)]="MinPrice"  (mouseup)="productsFilterMethod($event,'price')"
+                                    [(highValue)]="MaxPrice" [options]="options"></ng5-slider>
+                    </div>
+
+
+                </div>
+                <!-- <li class="list-group-item" *ngFor="let price of prices" hide="!item.prices"> -->
+                <!-- <input type="checkbox" class="custom-control-input" [checked]="productsFilter.price.includes(price)" (change)="productsFilterMethod(price, 'price')" [id]="price">&nbsp;
+                    <label class="custom-control-label" [attr.for]="price" style="color: #272727;font-weight: normal;">{{price}}</label> -->
+                <!-- </li> -->
+            </ul>
+
+            <ul class="list-group" *ngIf="processors.length">
+                <li class="list-group-item active"
+                    style="background: #b22827;border: 1px solid #b22827;color: white;font-size: 16px;">PROCESSORS
+                </li>
+                <li class="list-group-item" *ngFor="let processor of processors" hide="!item.processors">
+                    <input type="checkbox" class="custom-control-input"
+                           [checked]="productsFilter.processor.includes(processor)"
+                           (change)="productsFilterMethod(processor, 'processor')" [id]="processor">&nbsp;
+                    <label class="custom-control-label" [attr.for]="processor"
+                           style="color: #272727;font-weight: normal;">{{processor}}</label>
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="col-lg-9">
+            <div class="row">
+                <h4 style="font-weight: normal;text-align: center;font-size: 22px;margin-bottom: 10px;">{{ category.name }}</h4>
+                <div class="product-filter-content" style="padding:20px;">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <div class="product-page-per-view">
+                                <select class="unit-quantity-input " [(ngModel)]="productsFilter.perPage"
+                                        (ngModelChange)="productsFilterMethod($event,'ProductsParPage')"
+                                        style="width: 100%;border-radius: 0;color: #b22827;font-size: 15px;">
+                                    <option
+                                        *ngFor="let opt of [20,50,100]; let i = index"
+                                        [value]="opt"
+                                    >Showing {{ opt }} Product
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="product-page-filter">
+                                <select [(ngModel)]="sorting" (ngModelChange)="sortingItems($event)" name="sorting"
+                                        required placeholder="d.ff"
+                                        style="width: 100%;border-radius: 0;color: #b22827;font-size: 15px;">
+                                    <option [ngValue]="undefined" disabled selected hidden>Sorting items</option>
+                                    <option value="LowtoHigh">Low to High</option>
+                                    <option value="HighToLow">High to low</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="product-wrapper-grid">
+
+                    <app-product [products]="products" *ngIf="!isLoadding"></app-product>
+                    <!-- <img src="https://loading.io/spinners/spin/index.ajax-spinner-gif.svg" class="loadding-spinner" alt="" *ngIf="isLoadding"> -->
+
+                    <div *ngIf="(products | json) != '{}'">
+                        <div class="spinnerr" *ngIf="isLoadding">
+                            <div class="halfSpinr"></div>
+                        </div>
+                    </div>
+
+
+                    <div *ngIf="(products | json) == '{}'" style="text-align: center;">
+                        <h2><i class="fa fa-warning" style="color: #b22827;font-size: 52px;"></i></h2>
+                        <h2>No Products</h2>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" style="border-radius: 0;background: #272727;border: 1px solid;"
+                           href="javascript:void(0)"
+                           [class.disabled]="allProducts.last_page_url == null || allProducts.current_page == allProducts.last_page"
+                           (click)="pagination($event,allProducts.last_page)">
+                            <span><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a href="javascript:void(0)" style="border-radius: 0;background: #272727;border: 1px solid;"
+                           class="page-link" [class.disabled]="allProducts.next_page_url == null"
+                           (click)="pagination($event,allProducts.current_page + 1)">
+                            <span><i class="fa fa-chevron-right"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="page-item "
+                        *ngFor="let page of convertTotalPaginationNumberToArray(allProducts['last_page']); let i = index">
+                        <a href="javascript: void(0)" style="border-radius: 0;background: #272727;border: 1px solid;"
+                           class="page-link" [class.active]="(i + 1) == productsFilter.page"
+                           (click)="pagination($event, i + 1)">{{ i + 1 }}</a>
+                    </li>
+
+                    <li class="page-item">
+                        <a href="javascript:void(0)" style="border-radius: 0;background: #272727;border: 1px solid;"
+                           class="page-link" [class.disabled]="allProducts.prev_page_url == null"
+                           (click)="pagination($event,allProducts.current_page - 1)">
+                            <span><i class="fa fa-chevron-left"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="page-item">
+                        <a class="page-link" style="border-radius: 0;background: #272727;border: 1px solid;"
+                           href="javascript:void(0)"
+                           [class.disabled]="allProducts.first_page_url == null || allProducts.current_page == 1"
+                           (click)="pagination($event,1)">
+                            <span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
